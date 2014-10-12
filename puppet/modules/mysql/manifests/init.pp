@@ -17,8 +17,8 @@ class mysql {
   }
 
   exec { 'set-mysql-password':
-    unless  => 'mysqladmin -uroot -proot status',
-    command => 'mysqladmin -uroot password a9120ed2b58af37862a83f5b9f850819ed08b2a9',
+    unless  => 'mysqladmin -uroot -proot password root',
+    command => 'mysqladmin -uroot password root',
     path    => ['/bin', '/usr/bin'],
     require => Service['mysql'];
   }
